@@ -8,12 +8,15 @@ using System.Web.Http;
 
 namespace WebApplication15.Controllers
 {
+    /// <summary>
+    /// Contains method than return full URL.
+    /// </summary>
     public class FullLinkController : ApiController
     {
-        DbInterface db = new DbInterface();
+        readonly DbInterface db = new DbInterface();
 
         /// <summary>
-        /// Return a full URL from your short URL, send it in request body
+        /// Return a full URL from your short URL, send it in request body.
         /// </summary>
         public string Get([FromBody] int id)
         {
@@ -26,7 +29,7 @@ namespace WebApplication15.Controllers
                 }
                 ans = db.GetFullLink(id);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 ans = e.Message;
             }

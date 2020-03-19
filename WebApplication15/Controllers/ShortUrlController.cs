@@ -9,6 +9,9 @@ using WebApplication15.Models;
 
 namespace WebApplication15.Controllers
 {
+    /// <summary>
+    /// Contain controllers to create short URL.
+    /// </summary>
     public class ShortUrlController : ApiController
     {
         DbInterface generator = new DbInterface();
@@ -48,7 +51,7 @@ namespace WebApplication15.Controllers
                 generator.AddNewNote(givenUrl);
                 return Request.CreateResponse(HttpStatusCode.OK, "Done");
             }
-            catch(Exception e)
+            catch (Exception)
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, "can't add note");
             }
@@ -69,7 +72,7 @@ namespace WebApplication15.Controllers
                 generator.GetUrlContext().SaveChanges();
                 return Request.CreateResponse(HttpStatusCode.OK, "Done");
             }
-            catch(Exception e)
+            catch (Exception)
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, "can't update note");
             }
@@ -89,7 +92,7 @@ namespace WebApplication15.Controllers
                 generator.GetUrlContext().SaveChanges();
                 return Request.CreateResponse(HttpStatusCode.OK, "Done");
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, "can't delete note");
             }

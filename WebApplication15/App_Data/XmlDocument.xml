@@ -481,9 +481,19 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:WebApplication15.Controllers.FullLinkController">
+            <summary>
+            Contains method than return full URL.
+            </summary>
+        </member>
         <member name="M:WebApplication15.Controllers.FullLinkController.Get(System.Int32)">
             <summary>
-            Return a full URL from your short URL, send it in request body
+            Return a full URL from your short URL, send it in request body.
+            </summary>
+        </member>
+        <member name="T:WebApplication15.Controllers.ShortUrlController">
+            <summary>
+            Contain controllers to create short URL.
             </summary>
         </member>
         <member name="M:WebApplication15.Controllers.ShortUrlController.Get(System.String)">
@@ -513,14 +523,114 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:WebApplication15.Controllers.RedirectController">
+            <summary>
+            Contains method that redirect from shurt URL.
+            </summary>
+        </member>
         <member name="M:WebApplication15.Controllers.RedirectController.Get(System.Int32)">
             <summary>
             Redirect from short URL
             </summary>
         </member>
+        <member name="T:WebApplication15.Controllers.RedirectErrorController">
+            <summary>
+            Bad redirrect.
+            </summary>
+        </member>
         <member name="M:WebApplication15.Controllers.RedirectErrorController.Get(System.Int32)">
             <summary>
             Return BadREquest if id = 1, else return that short URL lifetime is end
+            </summary>
+        </member>
+        <member name="T:WebApplication15.Models.DbInterface">
+            <summary>
+            Data base interface.
+            </summary>
+        </member>
+        <member name="M:WebApplication15.Models.DbInterface.GetRedirectUrl(System.Int32)">
+            <summary>
+            Return full URL from id.
+            </summary>
+        </member>
+        <member name="M:WebApplication15.Models.DbInterface.GetShortUrl(System.String,System.String)">
+            <summary>
+            Add and create new short URL.
+            </summary>
+        </member>
+        <member name="M:WebApplication15.Models.DbInterface.GetFullLink(System.Int32)">
+            <summary>
+            Return full URL from id.
+            </summary>
+        </member>
+        <member name="M:WebApplication15.Models.DbInterface.GetFullLink(System.String)">
+            <summary>
+            Return full URL from id string.
+            </summary>
+        </member>
+        <member name="M:WebApplication15.Models.DbInterface.TimeIsGone(System.Int32)">
+            <summary>
+            Return true if short URL time is end.
+            </summary>
+        </member>
+        <member name="M:WebApplication15.Models.DbInterface.GetUrlContext">
+            <summary>
+            Returns URL context.
+            </summary>
+        </member>
+        <member name="M:WebApplication15.Models.DbInterface.AddNewNote(WebApplication15.Models.ShortUrl)">
+            <summary>
+            Adding new note.
+            </summary>
+        </member>
+        <member name="T:WebApplication15.Models.ShortUrl">
+            <summary>
+            Model of short url in database.
+            </summary>
+        </member>
+        <member name="P:WebApplication15.Models.ShortUrl.Id">
+            <summary>
+            Identifier.
+            </summary>
+        </member>
+        <member name="P:WebApplication15.Models.ShortUrl.ShortLink">
+            <summary>
+            Generated short link.
+            </summary>
+        </member>
+        <member name="P:WebApplication15.Models.ShortUrl.ShortLinkInt">
+            <summary>
+            Number of short link.
+            </summary>
+        </member>
+        <member name="P:WebApplication15.Models.ShortUrl.OldUrl">
+            <summary>
+            Full URL.
+            </summary>
+        </member>
+        <member name="P:WebApplication15.Models.ShortUrl.Date">
+            <summary>
+            Date of creating note.
+            </summary>
+        </member>
+        <member name="T:WebApplication15.Models.UrlContext">
+            <summary>
+            Database context.
+            </summary>
+        </member>
+        <member name="P:WebApplication15.Models.UrlContext.Urls">
+            <summary>
+            Data.
+            </summary>
+        </member>
+        <member name="T:WebApplication15.Models.UrlDbInitializer">
+            <summary>
+            Initialize Database.
+            </summary>
+        </member>
+        <member name="M:WebApplication15.Models.UrlDbInitializer.Seed(WebApplication15.Models.UrlContext)">
+            <summary>
+            Override seed function.
             </summary>
         </member>
     </members>

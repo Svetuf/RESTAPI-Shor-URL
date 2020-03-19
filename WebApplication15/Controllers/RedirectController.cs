@@ -9,9 +9,12 @@ using WebApplication15.Models;
 
 namespace WebApplication15.Controllers
 {
+    /// <summary>
+    /// Contains method that redirect from shurt URL.
+    /// </summary>
     public class RedirectController : ApiController
     {
-        DbInterface redirect = new DbInterface();
+        readonly DbInterface redirect = new DbInterface();
 
         /// <summary>
         /// Redirect from short URL
@@ -28,7 +31,7 @@ namespace WebApplication15.Controllers
                 }
                 ans = Redirect(redirect.GetRedirectUrl(id));
             }
-            catch(Exception e)
+            catch (Exception)
             {
                 ans = Redirect(Request.RequestUri.GetLeftPart(UriPartial.Authority) + "/api/redirecterror/1");
             }

@@ -6,8 +6,14 @@ using System.Data.Entity;
 
 namespace WebApplication15.Models
 {
+    /// <summary>
+    /// Initialize Database.
+    /// </summary>
     public class UrlDbInitializer : DropCreateDatabaseAlways<UrlContext>
     {
+        /// <summary>
+        /// Override seed function.
+        /// </summary>
         protected override void Seed(UrlContext db)
         {
             db.Urls.Add(new ShortUrl { Id = 1, ShortLink = "123", OldUrl = "b", Date = DateTime.Now, ShortLinkInt = 0 }) ;

@@ -7,6 +7,9 @@ using System.Web.Http;
 
 namespace WebApplication15.Controllers
 {
+    /// <summary>
+    /// Bad redirrect.
+    /// </summary>
     public class RedirectErrorController : ApiController
     {
         /// <summary>

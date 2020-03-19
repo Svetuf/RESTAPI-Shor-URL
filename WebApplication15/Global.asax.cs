@@ -8,7 +8,6 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Data.Entity;
 using WebApplication15.Models;
-
 namespace WebApplication15
 {
     public class WebApiApplication : System.Web.HttpApplication
