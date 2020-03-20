@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using WebApplication15.CustomFIlter;
 
 namespace WebApplication15
 {
@@ -7,7 +8,7 @@ namespace WebApplication15
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new ExceptionHandlerAttribute());
         }
     }
 }

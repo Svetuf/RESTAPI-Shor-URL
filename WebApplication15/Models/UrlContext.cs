@@ -15,5 +15,10 @@ namespace WebApplication15.Models
         /// Data.
         /// </summary>
         public DbSet<ShortUrl> Urls { get; set; }
+
+        /// <summary>
+        /// Logging.
+        /// </summary>
+        public DbSet<ExceptionLogger> ExceptionLoggers { get; set; }
     }
 }

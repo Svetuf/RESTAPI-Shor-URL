@@ -543,6 +543,16 @@
             Return BadREquest if id = 1, else return that short URL lifetime is end
             </summary>
         </member>
+        <member name="T:WebApplication15.CustomFIlter.ExceptionHandlerAttribute">
+            <summary>
+            Custom attribute.
+            </summary>
+        </member>
+        <member name="M:WebApplication15.CustomFIlter.ExceptionHandlerAttribute.OnException(System.Web.Mvc.ExceptionContext)">
+            <summary>
+            Exception handler.
+            </summary>
+        </member>
         <member name="T:WebApplication15.Models.DbInterface">
             <summary>
             Data base interface.
@@ -583,6 +593,11 @@
             Adding new note.
             </summary>
         </member>
+        <member name="T:WebApplication15.Models.ExceptionLogger">
+            <summary>
+            Logger class.
+            </summary>
+        </member>
         <member name="T:WebApplication15.Models.ShortUrl">
             <summary>
             Model of short url in database.
@@ -621,6 +636,11 @@
         <member name="P:WebApplication15.Models.UrlContext.Urls">
             <summary>
             Data.
+            </summary>
+        </member>
+        <member name="P:WebApplication15.Models.UrlContext.ExceptionLoggers">
+            <summary>
+            Logging.
             </summary>
         </member>
         <member name="T:WebApplication15.Models.UrlDbInitializer">
