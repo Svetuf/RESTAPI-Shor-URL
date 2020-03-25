@@ -1,24 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Text.RegularExpressions;
-using System.Web.Http;
-using WebApplication15.Models;
+﻿// <copyright file="ShortUrlController.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace WebApplication15.Controllers
 {
+    using System;
+    using System.Net;
+    using System.Net.Http;
+    using System.Text.RegularExpressions;
+    using System.Web.Http;
+    using WebApplication15.Models;
+
     /// <summary>
     /// Contain controllers to create short URL.
     /// </summary>
     public class ShortUrlController : ApiController
     {
-        DbInterface generator = new DbInterface();
+        readonly DbModel generator = new DbModel();
 
         /// <summary>
         /// Create a new short URL, you should send your URL in request body.
         /// </summary>
+        /// <returns>string.</returns>
         [HttpGet]
         public string Get([FromBody] string oldUrl)
         {
@@ -27,6 +30,7 @@ namespace WebApplication15.Controllers
             {
                 return "it's not url";
             }
+
             string ans;
             try
             {
@@ -36,6 +40,7 @@ namespace WebApplication15.Controllers
             {
                 ans = e.Message;
             }
+
             return ans;
         }
 

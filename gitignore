@@ -1,0 +1,15 @@
+bin
+obj
+StyleCop.Cache
+_ReSharper.Caches
+_TeamCity.*
+*.user
+*.suo
+*.~*
+.*
+
+!.nuget
+!.gitignore
+!.editorconfig
+!.template.config
+packages

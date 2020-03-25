@@ -19,7 +19,7 @@ namespace ShortUrlServise.Tests
         [Test]
         public void AddShortLinkTEst()
         {
-            DbInterface dbInterface = new DbInterface();
+            DbModel dbInterface = new DbModel();
 
             string answer = dbInterface.GetShortUrl("test", "localhost");
 

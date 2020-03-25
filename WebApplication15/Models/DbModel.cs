@@ -1,20 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿// <copyright file="DbModel.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace WebApplication15.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     /// <summary>
     /// Data base interface.
     /// </summary>
-    public class DbInterface
+    public class DbModel
     {
-        UrlContext db = new UrlContext();
+        readonly UrlContext db = new UrlContext();
 
         /// <summary>
         /// Return full URL from id.
         /// </summary>
+        /// <returns>string.</returns>
         public string GetRedirectUrl(int id)
         {
             IEnumerable<ShortUrl> allDb = db.Urls;
@@ -69,7 +73,7 @@ namespace WebApplication15.Models
         {
             DateTime time = (from i in db.Urls where i.ShortLinkInt == id select i.Date).FirstOrDefault();
             TimeSpan rez = DateTime.UtcNow - time;
-            return (rez.TotalMinutes >= 10);
+            return rez.TotalMinutes >= 10;
         }
 
         /// <summary>

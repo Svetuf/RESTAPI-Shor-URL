@@ -197,3 +197,5 @@ C:\git\RESTAPI-Shor-URL\WebApplication15\obj\Debug\ShortUrlService.csprojAssembl
 C:\git\RESTAPI-Shor-URL\WebApplication15\obj\Debug\ShortUrlService.csproj.CopyComplete
 C:\git\RESTAPI-Shor-URL\WebApplication15\obj\Debug\WebApplication15.dll
 C:\git\RESTAPI-Shor-URL\WebApplication15\obj\Debug\WebApplication15.pdb
+C:\git\RESTAPI-Shor-URL\WebApplication15\bin\log4net.dll
+C:\git\RESTAPI-Shor-URL\WebApplication15\bin\log4net.xml
